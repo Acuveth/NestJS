@@ -1,0 +1,345 @@
+// Dashboard Container - Perfect Centering with Black/Gray/White Theme
+.dashboard-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 32px;
+}
+
+.centered-content {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// The Main API Result Widget - Perfect Spacing with Dark Theme
+.api-result-widget {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  // Widget Header - Clean Padding
+  .widget-header {
+    padding: 24px 32px;
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+    justify-content: flex-end;
+    background: #fafafa;
+
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .status-dot {
+        width: 8px;
+        height: 8px;
+        background: #2ecc71;
+        border-radius: 50%;
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      .status-text {
+        font-size: 14px;
+        font-weight: 600;
+        color: #2ecc71;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  // Widget Body - Perfect Centering & Spacing
+  .widget-body {
+    padding: 64px 48px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    .icon-circle {
+      width: 96px;
+      height: 96px;
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(44, 62, 80, 0.3);
+
+      i {
+        font-size: 48px;
+        color: #ffffff;
+      }
+    }
+
+    .error-icon {
+      background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+      box-shadow: 0 8px 32px rgba(231, 76, 60, 0.3);
+    }
+
+    // THE MAIN MESSAGE - Perfectly Formatted
+    .api-message {
+      font-size: 48px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    .widget-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+      line-height: 1.2;
+    }
+
+    .widget-subtitle {
+      font-size: 16px;
+      color: #666666;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+    }
+
+    .error-message {
+      font-size: 16px;
+      color: #e74c3c;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      max-width: 400px;
+    }
+
+    // Message Details - Clean Grid
+    .message-details {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      max-width: 400px;
+
+      .detail-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 24px;
+        background: #f8f9fa;
+        border-radius: 12px;
+        border: 1px solid #e0e0e0;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #f0f0f0;
+          border-color: #d0d0d0;
+          transform: translateX(4px);
+        }
+
+        i {
+          font-size: 18px;
+          color: #2c3e50;
+          width: 24px;
+          text-align: center;
+        }
+
+        span {
+          font-size: 15px;
+          font-weight: 500;
+          color: #2d3748;
+          flex: 1;
+        }
+      }
+    }
+
+    // Retry Button - Perfect Spacing
+    .retry-btn {
+      margin-top: 16px;
+      padding: 16px 32px;
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(44, 62, 80, 0.4);
+        background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+
+      i {
+        font-size: 14px;
+      }
+    }
+  }
+
+  // Widget Footer - Tech Badges
+  .widget-footer {
+    padding: 24px 32px;
+    background: #fafafa;
+    border-top: 1px solid #e8e8e8;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    .tech-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      background: #ffffff;
+      border: 2px solid #2c3e50;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #2c3e50;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #2c3e50;
+        color: #ffffff;
+        transform: translateY(-2px);
+
+        i {
+          color: #ffffff;
+        }
+      }
+
+      i {
+        font-size: 16px;
+        color: #2c3e50;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  // Loading State Specific Styles
+  &.loading {
+    .widget-body {
+      padding: 80px 48px;
+    }
+
+    .widget-icon {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+// Loading Spinner - Perfectly Centered
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 6px solid #e0e0e0;
+  border-top-color: #2c3e50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+// Animations
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+// Responsive Design - Maintain Perfect Spacing
+@media (max-width: 640px) {
+  .dashboard-container {
+    padding: 20px;
+  }
+
+  .api-result-widget {
+    .widget-header {
+      padding: 20px 24px;
+    }
+
+    .widget-body {
+      padding: 48px 24px;
+      gap: 24px;
+
+      .icon-circle {
+        width: 80px;
+        height: 80px;
+
+        i {
+          font-size: 40px;
+        }
+      }
+
+      .api-message {
+        font-size: 36px;
+      }
+
+      .widget-title {
+        font-size: 28px;
+      }
+
+      .message-details .detail-item {
+        padding: 14px 20px;
+
+        i {
+          font-size: 16px;
+        }
+
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .widget-footer {
+      padding: 20px 24px;
+      flex-direction: column;
+      gap: 12px;
+
+      .tech-badge {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
